@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let currentYear=2026;
+        let birthYear,age;
+        
+        do{
+         birthYear = Number(prompt("Enter a number : "));
+        age = currentYear-birthYear;
+        if(age<=0){
+            alert("Invalid Year");
+        }
+        }while(age<=0);
+
+        if(age>=18){
+            document.write(`Your age is ${age}, Can vote`);
+        }
+        else{
+            document.write(`Your age is ${age},Can not vote`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
