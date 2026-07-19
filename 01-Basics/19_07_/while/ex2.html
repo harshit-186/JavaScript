@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .light {
+        background-color: silver;
+      }
+      .dark {
+        background-color: red;
+      }
+    </style>
+
+    <script>
+      let n = prompt("Enter a number : ");
+      if (isNaN(n)) {
+        document.write("Not a number");
+      } else {
+        let i = 1;
+        document.write("<table border='2'>");
+        let str;
+        while (i <= 10) {
+          // if(i%2===0){
+          //     str="dark"
+          // }else{
+          //     str="light"
+          // }
+          str = i % 2 === 0 ? "dark" : "light";
+          document.write(
+            `<tr class=${str}><td>${n} * ${i} = ${n * i} </tr></td>`,
+          );
+          i++;
+        }
+        document.write("</table");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
