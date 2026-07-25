@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-      //only copybnake return kr ke deta h no changes in arrray
+        //Negative indexing hoti h pr only for methods 
+        // arr.slice(-1)//deletes the last elements
+
 
         let fruits = ["apple" , "guava" , "banana", "grapes"];
         document.write(`Size: ${fruits.length}<br>`);//3
         document.write(`Values : ${fruits}<br>`);//
 
-        let xy = fruits.slice();
-         document.write(`Size : ${xy}<br>`);//gives array copy same as array
-
-        let xyz = fruits.slice(2);
+        let xyz = fruits.splice(2);//after 2 index of elements all elements are deleted
          document.write(`Size : ${xyz}<br>`);//
          document.write(`Length : ${fruits.length}<br>`);//
           document.write(`Values : ${fruits}<br>`);//
 
-          let rem = fruits.slice(1,3);
+          let rem = fruits.splice(1,3);
            document.write(`size : ${fruits.length}<br>`);//
-           document.write(`Given : ${rem}<br>`);//
+           document.write(`Deleted : ${rem}<br>`);//gives the  deleted values
            document.write(`Values : ${fruits}<br>`);//
 
 
-            let kbc = fruits.slice(1,2);//
+            let kbc = fruits.splice(1,2,"orange" , "Cherry");//adds the elements after deleting 
            document.write(`size : ${fruits.length}<br>`);//
-           document.write(`given : ${kbc}<br>`);//
+           document.write(`Deleted : ${kbc}<br>`);//gives the  deleted values
            document.write(`Values : ${fruits}<br>`);//
     </script>
 </head>
