@@ -12,22 +12,27 @@
         document.write(`Values : ${fruits}<br>`);//
 
         let xy = fruits.slice();
-         document.write(`Size : ${xy}<br>`);//gives array copy same as array
+         document.write(`copy1 : ${xy}<br>`);//gives array copy same as array
+
+        let yz = fruits.slice(-3);//
+         document.write(`Copy2 : ${yz}<br>`);//g,b,g
+         document.write(`Size : ${yz.length}<br>`);//
+
 
         let xyz = fruits.slice(2);
-         document.write(`Size : ${xyz}<br>`);//
+         document.write(`copy3 : ${xyz}<br>`);//
          document.write(`Length : ${fruits.length}<br>`);//
           document.write(`Values : ${fruits}<br>`);//
 
           let rem = fruits.slice(1,3);
            document.write(`size : ${fruits.length}<br>`);//
-           document.write(`Given : ${rem}<br>`);//
+           document.write(`copy4 : ${rem}<br>`);//
            document.write(`Values : ${fruits}<br>`);//
 
 
             let kbc = fruits.slice(1,2);//
            document.write(`size : ${fruits.length}<br>`);//
-           document.write(`given : ${kbc}<br>`);//
+           document.write(`copy5 : ${kbc}<br>`);//
            document.write(`Values : ${fruits}<br>`);//
     </script>
 </head>
