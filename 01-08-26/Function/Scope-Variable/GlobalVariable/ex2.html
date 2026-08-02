@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let a = 30;// function hide the global a variable
+         var a = 30 ; // it is global , not hide  by function variable // it goes on  Window object 
+        function fun1(){
+            let a = 10; //local Variable
+            alert(`in fun1 a is ${a}and global is ${window.a}`);
+        }
+          function fun2(){
+            let a = 20; 
+            alert(`in fun2 a is ${a}`);
+        }
+    </script>
+</head>
+<body>
+     <input type="button" value="Call Fun1" onclick="fun1()"/>
+    <input type="button" value="Call Fun2" onclick="fun2()"/>
+
+</body>
+</html>
