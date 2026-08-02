@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function avg(a,b,c,d){
+            let sum = a+b+c+d;
+            document.write(`Sum is ${sum}<br>`);
+            document.write(`Avg is ${sum/4}<br>`);
+        }
+        // avg.arguments(10,20);
+        avg(23,5,2,32);
+        avg(10,20);//undefined + number = NaN
+        avg(3,45,23,4,52,25,432,5423,5);//adds only starting 4 elements 
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function greetings(name){
+        function greetings(name){//this is replaced by further Same function name
+            document.write(`Good Mmorning  <br>`);
+        }
+        //overloading nhi hoti in JS
+         function greetings(name){
             document.write(`Good Mmorning , ${name} <br>`);
         }
-        greetings("Sachin");
+        greetings();//undefined
         greetings("Hex");
+        greetings("Sachin","Hex","Amit")//drops the further elements
     </script>
 </head>
 <body>
