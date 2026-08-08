@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let id ; 
+        function setTimer(){
+            id  = setInterval(function (){
+                let now = new Date();
+                console.log(`${now}`);
+            },1000);
+        }
+        function stopTimer(){
+            clearInterval(id);
+            console.log("Time Stoped with id",id);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Start" onclick="setTimer()"/>
+    <input type="button" value="Stop" onclick="stopTimer()"/>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i = 1 ; 
+        let id ;
+        let x = function showNum(){
+            document.write(`${i}<br>`);
+            if(i==10){
+                clearInterval(id);
+                document.write("Time over!")
+            }
+            i++;
+        }
+        function setTimer(){
+           id = setInterval(x,1000);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Start" onclick="setTimer()"/>
+</body>
+</html>
