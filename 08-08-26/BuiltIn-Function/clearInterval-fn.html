@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+        let id
+        function showDateTime(){
+            let now = new Date();
+            console.log(`${now}`);
+           // setInterval(showDateTime,1000);executes multiple times in a second 
+
+        }
+        function setTimer(){
+            console.log("Start Timer");
+             id= setInterval(showDateTime,1000);//returns a number (ID) which is use in clearInterval to stop it
+            
+        }
+        function stopTimer(){
+            console.log("Stop timer");
+            clearInterval(id);//it stops the setInterval by using its ID
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Start timer" onclick="setTimer()"/>
+    <input type="button" value="Stop timer" onclick="stopTimer()"/>
+
+</body>
+</html>
