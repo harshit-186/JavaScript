@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-  let myCar = new Object();
+
+<script>
+     let myCar = new Object();
         myCar.name = "BMW";
         myCar.color = "Red";
         myCar.year = 2022;
 
-        myCar["start"] = function(){
+        myCar.start = function(){
             console.log("car is starting...");
         };
 
-
-        
-
-
-       //  myCar[stop] = function(){  //gives values by taking stop as a variable without ""
-      //      console.log("car is stoppinggg....");
-      //  };
-
-        myCar["stop"] = function(){
-            console.log("car is stoppinggg....");
+        myCar.stop = function(){
+            console.log("car is stoping...");
         };
+    
 
-        myCar.start();//behaves like a method
+  myCar.start();//behaves like a method
         myCar.stop();//behaves like a method 
 
-    </script>
+</script>
 </head>
 <body>
     
