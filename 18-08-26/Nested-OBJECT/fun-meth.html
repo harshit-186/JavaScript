@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let myCar = {
+            name : "BMW" , 
+            color : "RED" ,
+            year : 2020 ,
+
+            start : function(){
+             console.log("car is starting");
+        },
+
+         stop : function(){
+             console.log("car is stopping");
+        },
+
+        printDetails : function(){
+            console.log(`Name : ${myCar.name}, Color : ${myCar.color}, Year : ${myCar.year}`)
+        }
+        };
+        myCar.start();
+        myCar.stop();
+        myCar.printDetails();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
