@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let start = "ShuruHoJao";
+        let stop = "RUKjao";
+        let myCar = new Object();
+        myCar.name = "BMW";
+        myCar.color = "Blue";
+        myCar.year = 2020;
+        myCar[start] = function () {
+            console.log("Car is starting");
+        };
+          myCar[stop] = function () {
+            console.log("Car is stopping");
+        };
+
+        // myCar.start(); ERROR
+        myCar.ShuruHoJao();
+        myCar.RUKjao();
+        // myCar.stop(); ERROR
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
