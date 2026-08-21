@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account EXAMPLE</title>
+    <script>
+        let account = {
+            accId :  null , 
+            name : null ,
+            balance :  null ,
+
+            setacc : function (id ,name,balance) {
+                account.accId=id ;
+                account.name=name;
+                account.balance=balance;
+            },
+
+            deposit :function(amount){
+                if(amount<=0){
+                    document.write("INVALID AMOUNT");
+                    return;
+                }
+                account.balance+=amount;
+                document.write(`<br> Rs . ${}`)
+
+            },
+
+            withDraw : function(){
+
+            },
+
+            toString : function(){
+
+            }
+
+        };
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

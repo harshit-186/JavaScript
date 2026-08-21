@@ -6,7 +6,10 @@
     <title>Document</title>
     <script>
         let  num = [10,20,30,40];
+        document.write(`<br>${num}<br>`);
+
         let today = new Date();
+        document.write(`<br>${today}<br><br>`);
 
         let myCar = {
             name : "BMW",
@@ -14,7 +17,6 @@
             toString : function () {//override toString
                 return `${myCar.color}, ${myCar.name}` ;
             }
-
         }
         document.write(myCar);
     </script>
