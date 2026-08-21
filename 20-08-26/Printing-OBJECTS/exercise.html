@@ -22,19 +22,40 @@
                     return;
                 }
                 account.balance+=amount;
-                document.write(`<br> Rs . ${}`)
+                document.write(`<br> Rs . ${amount} Amount deposited! <br>`);
 
             },
 
-            withDraw : function(){
+            withDraw : function(amount){
+                if(account.balance<amount){
+                    document.write("FUNDS TOO LOW!!");
+                    return;
+                }
+
+                account.balance-=amount;
+                document.write(`<br> Rs . ${amount} Amount Withdrawn!<br>`);
+                document.write(`Now balance is ${account.balance}<br>`);
 
             },
 
             toString : function(){
+                return `AccountID : ${account.accId} , 
+                Name : ${account.name} , 
+                Balance : ${account.balance}`;
 
             }
 
         };
+
+        account.setacc(101 , "RAHUL" , 780000);
+        document.write("Account Details : <br>");
+        document.write(account);
+
+        account.withDraw(85000);
+        account.deposit(600000);
+
+         document.write("Account Details : <br>");
+        document.write(account);
 
     </script>
 </head>
