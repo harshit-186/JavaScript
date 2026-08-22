@@ -23,7 +23,22 @@
         document.write(per1===per2);
         document.write("<br>");
 
+        //JSON POV - Data Representation Format
+        //JSON - JavaScript Object Notation
 
+        //How do we compare objects--
+        // in jS ,to compare 2 objects we 1st have to convert them into String and this can be done by using 
+        // an object called JSON 
+        //what is JSON
+        // in web development JSON has 2 meanings 
+        // 1 - with resoect to  JS , JSON is a predefined object just like console , document or window 
+        // 2 - in general JSON is a very popular data representation Format used by API while transfering the data from client to server or vise-versa
+        // Its syntax closely resembles the sytntax of object in JS 
+        //About JSON object of JS--
+        //As mention above , JS provide us a special predefined objct called JSON which helps us convert JS objject to js string and vise-versa
+        // 1 - converting JS object to JSON String for this JSON provide us a mehtod Caledd stringify which accpects a JS object as args and returns as a JSON a sting
+        //2 - parse - for cinverting a JSON string into JS object  
+        // So in order to compare 2 onbject in  JS we can 1st convert them into JSIN string and then  compare them using  === or ==
          let ktr = JSON.stringify(per1);
          let vtr = JSON.stringify(per1);
 
@@ -31,8 +46,6 @@
         document.write("<br>");
         document.write(vtr);
         document.write("<br>");
-
-
 
         document.write(ktr===vtr);
 
