@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function multiply(a,b,p){
+            let res = a*b ;
+            p(res);
+        }
+        function display (num){
+            document.write(`Result of product is ${num}`);
+        }
+        multiply(3,4,display);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
