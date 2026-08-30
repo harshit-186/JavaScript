@@ -1,0 +1,8 @@
+
+
+
+CallBack-Function:---------> 
+
+in java , just like we can pass a variable an arrray as arguments to a function , Similarly we also can pass a function 
+as arguments to another function & where we do this , the function getting pass will be called as CallBack & the function 
+which is accepting the CallBack will be called as high order function . 
