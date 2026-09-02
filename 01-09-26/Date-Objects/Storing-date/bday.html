@@ -6,10 +6,10 @@
     <title>Document</title>
     <script>
         let bday = prompt("Enter your Birthdate(yyyy-mm-dd)");
-        let bdayDate = new Date(bady);
+        let bdayDate = new Date(bday);
         let dayNum = bdayDate.getDay();
-        let days = [ "Sun" , ]
-        document.write(`${bday}`);
+        let days = [ "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"];
+        document.write(`Your Birthday is on : ${bday} and it was : ${days[dayNum]} `);
 
     </script>
 </head>
