@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let bday = prompt("Enter your Birthdate(yyyy-mm-dd)");
+        let bdayDate = new Date(bday);
+        let dayNum = bdayDate.getDay();
+        
+        document.write(`Your Birthday is on : ${bday} and it was : `);
+        switch (dayNum){
+            case 0 : document.write(`Sunday`);
+            break;
+            case 1 : document.write(`Monday`);
+            break;
+            case 2 : document.write(`Tuesday`);
+            break; 
+            case 3 : document.write(`Wednesday`);
+            break;
+            case 4 : document.write(`Thursday`);
+            break;
+            case 5 : document.write(`Friday`);
+            break;
+            case 6 : document.write(`Saturday`);
+            break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
