@@ -1,0 +1,10 @@
+
+
+// it makes website dynamic and interactive
+// DOM -- > DocumentObjectModel (DOM tree -> imagination which is in browser)
+// DOM can provide function that access html webpage and manupulate them to make website dynamic
+// Now here from the real JS starts (DOM is library of JS)
+//JS uses the DOM to :
+//1 : Access elements 
+//2 : Modify content 
+//3 : Changes Styles
