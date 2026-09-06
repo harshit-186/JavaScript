@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let imagesArr = [
+        "luffy.jgp",
+        "luffy2.jgp",
+        "icons-instagram-50.png",
+        "icons-tick-24.png",
+      ];
+      let i = 0;
+      function operate() {
+        //images on click bn by Arrayr
+        document.images[0].src = `../Media/${imagesArr[i]}`;
+        i++;
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNTRYPki7wJKHn8_gOEzCn9KL3pMttlJW-PHwZantRg&s=10"
+      alt="Invalid"
+      width="120px"
+      height="140px"
+    />
+    <h2>Welcome To SCA</h2>
+    <h3>Our Mission</h3>
+
+    <p>
+      The mission of the SHARMA COMPUTER ACADEMY is to provide its students with
+      the foundation for lifelong learning
+    </p>
+    <input type="button" value="Click me" onclick="operate()" />
+  </body>
+</html>
