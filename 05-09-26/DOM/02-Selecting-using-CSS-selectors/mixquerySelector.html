@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //select the first para
+      function operate(){
+        let x = document.querySelector("p");
+        document.write(x);
+      }
+      //select an element with class highlight
+      function go(){
+        let h = document.querySelectorAll(".highlight");
+        document.write(h);
+
+      }
+      //select the para with class highlight
+      function ko(){
+        let high = document.querySelector(".highlight");
+        document.write(high);
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque
+      voluptatum quae nam ut hic, repellat odio quia deleniti dignissimos?
+    </p>
+    <p class="highlight">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque
+      voluptatum quae nam ut hic, repellat odio quia deleniti dignissimos?
+    </p>
+    <p class="highlight">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque
+      voluptatum quae nam ut hic, repellat odio quia deleniti dignissimos?
+    </p>
+    <input type="button" value="Click Me" id="" onclick="operate()" />
+    <input type="button" value="Click Me" id="" onclick="go()" />
+    <input type="button" value="Click Me" id="" onclick="ko()" />
+
+  </body>
+</html>
