@@ -6,14 +6,20 @@
     <title>Document</title>
     <script>
         //gives tags of html
-        let x = document.getElementsByTagName("li");
+         function operate(){
+        //write code to acess all <li>tag of <ul> with class "hex"
+         let ul = document.getElementById("hex");
+        let allLI = ul.getElementsByTagName("li");
+        for (let x of allLI){
         console.log(x);
+        }
+    }
     </script>
 </head>
 <body>
       <h3>Our Courses</h3>
 
-    <ul id="hi">
+    <ul id="hex">
       <li>C</li>
       <li>C++</li>
       <li>Python</li>

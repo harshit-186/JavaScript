@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        //only takes id's 
-        function operate() {
-            let ul = document.getElementById("hi");
-            // document.write(`${ul}`);
-            console.log(ul);
+        //gives tags of html
+         function operate(){
+        //write code to acess all <li>tag of <ul> with class "hex"
+         let ul = document.getElementsByClassName("lex");//gives nodelist of class 
+        //  console.log(ul);
+        let allLI = ul[1].getElementsByTagName("li");
+        for (let x of allLI){
+        console.log(x);
         }
+    }
     </script>
 </head>
 <body>
-     <h3>Our Courses</h3>
+      <h3>Our Courses</h3>
 
-    <ul id="hi">
+    <ul class="lex">
       <li>C</li>
       <li>C++</li>
       <li>Python</li>
@@ -32,7 +36,7 @@
 
     <h3>Our Trainers</h3>
 
-    <ul>
+    <ul class="lex">
       <li>Mr. Sachin Kapoor</li>
       <li>Mr. Paramjeet Singh</li>
       <li>Mr. Udit Namdev</li>
