@@ -7,7 +7,7 @@
     <script>
         function operate(){
             let today = new Date();
-            let str = today.getDate()+"/"+today.getMonth()+1+"/"+today.getFullYear();
+            let str = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
             let p = document.querySelector("p");
             p.innerText=str ;
             p.style.color = "crimson";
