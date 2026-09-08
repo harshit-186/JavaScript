@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
+        // convert all names to bold 
+        function operate(){
+         let allNames = document.querySelectorAll("li");
+         allNames.forEach((x)=>{
+            //innerHTML takes inside any elements as a tag if they are , not like innerText take it as text
+            x.innerHTML="<b>"+x.innerText.toUpperCase()+"</b>";
+         });
+        }
     </script>
 </head>
 <body>
+
+    <h3>ALL Courses</h3>
+
     <ul>
         <li>Java</li>
         <li>Python</li>
         <li>C</li>
         <li>Django</li>
         <li>C++</li>
-
     </ul>
+
+    <h3>Our Trainers</h3>
+
+    <ul>
+      <li>Mr. Sachin Kapoor</li>
+      <li>Mr. Paramjeet Singh</li>
+      <li>Mr. Udit Namdev</li>
+      <li>Mr. Afroz Alam</li>
+    </ul>
+    <input type="button" value="Click Me" id="" onclick="operate()"/>
 </body>
 </html>

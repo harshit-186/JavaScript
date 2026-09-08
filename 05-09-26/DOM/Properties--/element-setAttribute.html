@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add link</title>
+    <script>
+      function showLink(){
+        //code to add the link dynamically
+        let websiteURL = prompt("Enter a URL : ");
+        let a = document.querySelector("a");
+        a.setAttribute("href" , websiteURL);
+        let dotIndex = websiteURL.indexOf(".");
+        let domainName = websiteURL.substring(dotIndex);
+        //a.innerText="Visit"+websiteURL;
+        a.innerText="Visit"+domainName;
+
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Generate Website Link</h3>
+    <br />
+    <br />
+    <input
+      type="button"
+      value="Create Website Link"
+      id=""
+      onclick="showLink()"
+    />
+    <br />
+    <a></a>
+  </body>
+</html>

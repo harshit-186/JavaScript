@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // write the code to convert text of all names to UpperCase
+        function operate(){
+            let allCourses = document.querySelectorAll("li");
+            allCourses.forEach((x) => {
+              x.innerText=x.innerText.toUpperCase();  
+            });
+        }
+    </script>
+</head>
+<body>
+    
+     <h3>Our Courses</h3>
+      <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Django</li>
+        <li>MERN</li>
+        <li>Java</li>
+        <li>Oracle</li>
+      </ul>
+
+    <h3>Our Trainers</h3>
+    <ul>
+      <li>Mr. Sachin Kapoor</li>
+      <li>Mr. Paramjeet Singh</li>
+      <li>Mr. Udit Namdev</li>
+      <li>Mr. Afroz Alam</li>
+    </ul>
+    <p class="highlight">
+      Our trainers have more than 15 years of experience in IT Industry in
+      various domains
+    </p>
+    
+  
+    <input type="button" value="Click me" onclick="operate()">
+  
+</body>
+</html>
