@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addPara(){
+            //generate ordered para
+            let div = document.querySelector("#hex");
+            let children = div.children;
+            let p = document.createElement("p");
+            let text = document.createTextNode("I am para "+(childern.length+1));
+            p.appendChild(text);
+            div.appendChild(p);
+        }
+    </script>
+</head>
+<body>
+    <div id="hex">
+        <p>I am para 1</p>
+        <p>I am para 2</p>
+    </div>
+    <input type="button" value="Add new para" onclick="addPara()"/>
+    
+</body>
+</html>
