@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showTime(){
+            let today = new Date();
+            let str = today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            let div = document.querySelector("#d1");
+            div.innerText = str ; 
+            div.style.fontWeight="bold";
+            div.style.color = "purple";
+            div.style.textAlign="center";
+            div.style.fontSize="40px";
+
+        }
+        function setTimer(){
+            setInterval(showTime,1000);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Show Timer" id="" onclick="setTimer()"/>
+    <div id="d1"></div>
+</body>
+</html>
