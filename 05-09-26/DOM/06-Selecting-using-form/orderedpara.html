@@ -10,7 +10,7 @@
             let div = document.querySelector("#hex");
             let children = div.children;
             let p = document.createElement("p");
-            let text = document.createTextNode("I am para "+(childern.length+1));
+            let text = document.createTextNode("I am para "+(children.length+1));
             p.appendChild(text);
             div.appendChild(p);
         }
@@ -20,6 +20,7 @@
     <div id="hex">
         <p>I am para 1</p>
         <p>I am para 2</p>
+        <p></p>
     </div>
     <input type="button" value="Add new para" onclick="addPara()"/>
     
