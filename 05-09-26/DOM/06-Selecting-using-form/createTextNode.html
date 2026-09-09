@@ -6,20 +6,17 @@
     <title>Document</title>
     <script>
       function addPara() {
-        //generate ordered para
-        let div = document.querySelector("#hex");
-        let children = div.children;// take only elements as a child not enter
+        //create a new para and add it in the div
         let p = document.createElement("p");
-        let text = document.createTextNode(
-          "I am para " + (children.length + 1),
-        );
+        let text = document.createTextNode("I am para 3");
         p.appendChild(text);
-        div.appendChild(p);
+        let div = document.querySelector("div");
+        div.appendChild(p); // appendchild() takes only one parameter at a time which is only elements
       }
     </script>
   </head>
   <body>
-    <div id="hex">
+    <div>
       <p>I am para 1</p>
       <p>I am para 2</p>
     </div>
