@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new para at top</title>
+    <script>
+        function addNote(){
+            let div = document.querySelector("#d1");
+            let p = document.createElement("p");
+            let text = document.createTextNode("WELCOME HEX");
+            p.appendChild(text);
+            div.insertBefore(p,div.firstElementChild);
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <p>This is first paragraph</p>
+        <p>This is second paragraph</p>
+    </div>
+    <input type="button" value="Add New Note" id="" onclick="addNote()"/>
+
+</body>
+</html>
