@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using removeChild()</title>
+    <script>
+        function addPara(){
+            let np = document.createElement("p");
+            np.innerText="I am para 3";
+            // p.append("WELCOME HEX" );   take as a String 
+            let div = document.querySelector("#hex");
+            div.append("WELCOME TO JS",np);
+            div.append(np,"WELCOME TO JS");
+
+        }
+    </script>
+</head>
+<body>
+    <div id="hex">
+      <p>I am para 1</p>
+      <p>I am para 2</p>
+    </div>
+    <input type="button" value="Add new para" onclick="addPara()" />
+</body>
+</html>
