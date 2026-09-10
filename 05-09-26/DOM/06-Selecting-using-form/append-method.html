@@ -8,10 +8,13 @@
         function addPara(){
             let np = document.createElement("p");
             np.innerText="I am para 3";
-            // p.append("WELCOME HEX" );   take as a String 
+            // np.append("WELCOME HEX" );   take as a String 
+            let kp = document.createElement("p");
+            let text = document.createTextNode("Hey, HI GUYZZ!");
+            kp.append(text);
             let div = document.querySelector("#hex");
-            div.append("WELCOME TO JS" , np);
-            div.append(np , "WELCOME TO JS");
+            // div.append("WELCOME TO JS" , np , kp);
+            div.append(np , "WELCOME TO JS" , kp , "JAVASCRIPTS ROCKS!!");
         }
     </script>
 </head>
