@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using removeChild()</title>
+    <script>
+        //removes first child para
+        function removePara(){
+            let div = document.querySelector("#hex");
+            div.removeChild(div.firstElementChild);
+        }
+    </script>
+</head>
+<body>
+    <div id="hex">
+      <p>I am para 1</p>
+      <p>I am para 2</p>
+    </div>
+    <input type="button" value="Add new para" onclick="removePara()" />
+</body>
+</html>
