@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Color of WEBPAGE</title>
+    <script>
+      //Change page color as per the button clicked
+      function ChangeColor(hex) {
+        let txtNode = hex.nextSibling;
+        document.bgColor = txtNode.nodeValue.trim(); //trim() is used for to remove fuzzy sapces at starting aur in ending, it optimizes the code
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="radio"
+      name="r1"
+      id="lul"
+      onclick="ChangeColor(this)"
+    />Red<br /><br />
+    <input
+      type="radio"
+      name="r1"
+      id="lul"
+      onclick="ChangeColor(this)"
+    />Green<br /><br />
+    <input
+      type="radio"
+      name="r1"
+      id="lul"
+      onclick="ChangeColor(this)"
+    />Yellow<br /><br />
+    <input
+      type="radio"
+      name="r1"
+      id="lul"
+      onclick="ChangeColor(this)"
+    />Lightblue
+  </body>
+</html>
