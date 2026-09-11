@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Handling Using HTML</title>
+    <script>
+        //define a single function for both divs 
+        function changeColor(x){
+            if(x.id==="div1"){
+                x.style.backgroundColor = "red" ;
+            }else {
+                x.style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+     <style>
+        #div1{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+         #div2{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+<body>
+     <div id="div1" onclick="changeColor(this)"> Click to change color to red</div>
+    <div id="div2" onclick="changeColor(this)"> Click to change color to yellow</div>
+</body>
+</html>
