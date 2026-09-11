@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor1(){
+            let div1 = document.querySelector("#div1");
+            div1.style.backgroundColor = "red";
+        }
+         function changeColor2(){
+            let div2 = document.querySelector("#div2");
+            div2.style.backgroundColor = "yellow";
+        }
+    </script>
+    <style>
+        #div1{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+         #div2{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" onclick="changeColor1()"> Click to change color to red</div>
+    <div id="div2" onclick="changeColor2()"> Click to change color to yellow</div>
+
+</body>
+</html>

@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Using classList</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      .hex{
+        background-color: lightblue;
+        font-weight: bold;
+      }
+    </style>
     <script>
         //add ()
         function decorate(){
             let para = document.querySelector("p");
-            para.classList.add("error");
+            para.classList.add("hex");
         }
         //remove ()
           function undecorate(){
             let para = document.querySelector("p");
-            para.classList.remove("error");
+            para.classList.remove("hex");
         }
 
         //toggle()
           function toggleCss(){
-            let para = document.querySelector("p");
-            para.classList.toggle("error");
+            let para = document.querySelector("ul");
+            para.classList.toggle('hex');
         }
 
     </script>
 </head>
 <body>
     <h3>Our Courses</h3>
-    <ul class="highlight">
+    <ul class="high">
       <li>C</li>
       <li>C++</li>
       <li>Python</li>
@@ -48,9 +55,9 @@
       various domains
     </p>
 
-    <input type="button" value="Click me" onclick="decorate()" />
-    <input type="button" value="Click me" onclick="undecorate()" />
-    <input type="button" value="Click me" onclick="toggleCss()" />
+    <input type="button" value="Click to Add" onclick="decorate()" />
+    <input type="button" value="Click to Remove" onclick="undecorate()" />
+    <input type="button" value="Click to Toggle" onclick="toggleCss()" />
 
 
 </body>
