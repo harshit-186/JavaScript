@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        height: 100px;
+        width: 100px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLwNHNKEzPQk8XimAFfEeuLdl1cEiwfXQw1hMKB6um7w&s=10"
+      alt="Error to load"
+    />
+    <script>
+      let img = document.querySelector("img");
+      img.addEventListener("mouseenter", () => {
+        // img.style.height = "35%";
+        // img.style.width = "40%";
+        img.style.transform = "scale(5.3)";
+      });
+
+      img.addEventListener("mouseleave", () => {
+        // img.style.height = "100px";
+        // img.style.width = "100px";
+        img.style.transform = "scale(1)";
+      });
+    </script>
+  </body>
+</html>
