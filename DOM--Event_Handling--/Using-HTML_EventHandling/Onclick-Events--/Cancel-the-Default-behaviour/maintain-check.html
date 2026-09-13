@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <script>
+      function check(anchor) {
+        let wbName = prompt("Enter google or instagram");
+        if (wbName == "google") {
+          anchor.setAttribute("href", "http://www.google.com");
+          return true;
+        } else if (wbName == "instagram") {
+          anchor.setAttribute("href", "http://www.instagram.com");
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#" onclick="return(check(this))">Click Me to Visit</a>
+  </body>
+</html>
