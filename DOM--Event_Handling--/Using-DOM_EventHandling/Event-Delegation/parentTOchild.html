@@ -18,16 +18,19 @@
       <li>Mr. Afroz Alam</li>
     </ul>
     <script>
-      let allLi = document.querySelectorAll("li");
-      allLi.forEach((hex) => {
-        hex.addEventListener("click", () => {
-          hex.style.color = "red";
-        });
-      });
+    //   let allLi = document.querySelectorAll("li");
+    //   allLi.forEach((hex) => {
+    //     hex.addEventListener("click", () => {
+    //       hex.style.color = "red";
+    //     });
+    //   });
 
+    // parent p lga hua event child p v apply hota h AKA Event Delegation (agr child p event nhi lga hua h to)
       let btn = document.querySelector("#btn");
       let ul = document.querySelector("ul");
-
+         ul.addEventListener("click" , (hex)=>{
+            hex.target.style.color = "red";
+         });
         btn.addEventListener("click", () => {
         let task = prompt("Enter Your name : ");
         ul.innerHTML = "<li>" + task + "</li>";
