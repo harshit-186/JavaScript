@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Type your Phone No.</b><input type="text" name="" id="input">
+    <script>
+        let txtNum = document.querySelector("#input");
+        txtNum.addEventListener("keydown" , (hex)=>{
+            if((hex.key<"0" || hex.key>"9") && (hex.key!="Backspace")){
+                alert("Plz enter only numbers !");
+                hex.preventDefault();
+            }
+             
+        })
+    </script>
+</body>
+</html>
