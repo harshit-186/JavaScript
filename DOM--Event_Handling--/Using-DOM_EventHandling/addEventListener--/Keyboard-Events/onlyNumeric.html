@@ -6,16 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <b>Type your Phone No.</b><input type="text" name="" id="input">
+    <b>Type your Phone No.</b><input type="text" name="" id="input" maxlength="10">
     <script>
         let txtNum = document.querySelector("#input");
         txtNum.addEventListener("keydown" , (hex)=>{
             if((hex.key<"0" || hex.key>"9") && (hex.key!="Backspace")){
                 alert("Plz enter only numbers !");
                 hex.preventDefault();
-            }
-             
-        })
+            }       
+        });
     </script>
 </body>
 </html>

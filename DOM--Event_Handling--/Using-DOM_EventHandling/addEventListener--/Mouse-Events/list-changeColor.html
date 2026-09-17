@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //change color on click on list items
+    <h3>Our Trainers</h3>
+    <br>
+     <ul>
+      <li>Mr. Sachin Kapoor</li>
+      <li>Mr. Paramjeet Singh</li>
+      <li>Mr. Udit Namdev</li>
+      <li>Mr. Afroz Alam</li>
+    </ul>
+    <script>
+        let allLi = document.querySelectorAll("li");
+        allLi.forEach((hex)=>{
+        hex.addEventListener("click" , ()=>{
+            hex.style.color = "red" ;
+        } );
+        });
+    </script>
+</body>
+</html>
