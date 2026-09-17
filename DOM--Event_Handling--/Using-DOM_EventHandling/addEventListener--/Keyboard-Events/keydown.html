@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown Event Handling</title>
+</head>
+<body>
+    <b>Type Handling</b> <input type="text" name="" id="ip1">
+    <script>
+        let txtBox = document.querySelector("#ip1");
+        txtBox.addEventListener("keydown" , (hex)=>{
+            alert("You Typed : " + hex.key);     
+        })
+    </script>
+</body>
+</html>
