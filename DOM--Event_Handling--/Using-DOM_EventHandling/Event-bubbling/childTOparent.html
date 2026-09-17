@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> Hello Guyzz
+    <ul>
+    Welcome to Console 
+    <br><br>
+      <li>Mr. Sachin Kapoor</li>
+      <li>Mr. Paramjeet Singh</li>
+      <li>Mr. Udit Namdev</li>
+      <li>Mr. Afroz Alam</li>
+    </ul>
+    </div>
+    <script>
+        let liItems = document.querySelectorAll("li");
+        liItems.forEach((hex)=>{
+            hex.addEventListener("click" , (ref)=>{
+                console.log("li clicked!");
+                ref.stopPropagation();// stops the event of parent from excution 
+            });
+        });
+
+         let ul = document.querySelectorAll("ul");
+        ul.forEach((hex)=>{
+            hex.addEventListener("click" , (ref)=>{
+                console.log("ul clicked!");// clicked ul event as well as parent (div) Event also execute on clicking ul
+               // ref.stopPropagation();// stops the event of parent from excution 
+            });
+        });
+
+         let div = document.querySelectorAll("div");
+        div.forEach((hex)=>{
+            hex.addEventListener("click" , (ref)=>{
+                console.log("div clicked!");
+               // ref.stopPropagation();// stops the event of parent from excution 
+            });
+        });
+    </script>
+</body>
+</html>
