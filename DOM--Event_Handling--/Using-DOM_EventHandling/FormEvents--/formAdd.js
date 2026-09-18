@@ -1,21 +1,21 @@
-let myForm=document.myfrm;
-let firstTxt=myForm.txtfno;
-let secTxt=myForm.txtsno;
-let thirTxt=myForm.txtresult;
-let btnAdd=myForm.btnadd;
-let btnClear=myForm.btnclear;
+ 
+ let myForm = document.myfrm;
+ let finp = myForm.txtfno;
+ let sinp = myForm.txtsno;
+ let thinp = myForm.txtresult;
+ let addbtn = myForm.btnadd ;
+ let clearbtn = myForm.btnclear ; 
 
-btnAdd.addEventListener("click",()=>{
-let x=Number(firstTxt.value);
-let y=Number(secTxt.value);
-let z=x+y;
-thirTxt.value=z;
-});
+ addbtn.addEventListener("click" , ()=>{
+    let a = Number(finp.value) ;
+    let b = Number(sinp.value) ;
+    let z = a+b ;
+    thinp.value = z;
+ });
 
-btnClear.addEventListener("click",()=>{
-firstTxt.value="";
-secTxt.value="";
-thirTxt.value="";
-firstTxt.focus();
-
-});
+  clearbtn.addEventListener("click" , ()=>{
+    finp.value = "";
+    sinp.value = "";
+    thinp.value = "";
+    finp.focus();
+ })
