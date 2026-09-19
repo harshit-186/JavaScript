@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frmlogin" action="https://onedrive.live.com/login" method="post">
+			<table>
+				<tbody><tr>
+					<td>Login Id:</td>
+					<td><input type="text" name="txtuser" id="userid"></td>
+					<td><span id="txterror"></span></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="txtpwd" id="userpwd"></td>
+					<td><span id="pwderror"></span></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Login"></td>
+				</tr>
+			</tbody></table>
+		</form>
+        <script>
+            let myForm = document.frmlogin;
+            let Finp = myForm.txtuser;
+            let Sinp = myForm.txtpwd;
+            let spn1 = document.querySelector("#txterror");
+            let spn2 = document.querySelector("#pwderror");
+            spn1.innerText=" ";
+
+            myForm.addEventListener("submit" , (hex)=>{
+                let user = Finp.value ;
+                let pwd = Sinp.value ;
+                let isValid = true;
+                if(user.length === 0 ){
+                    spn1.innerText = "Plz enter username";
+                    spn1.style.color = "crimson";
+                    isValid= false;
+                }
+
+                if(pwd.length === 0){
+                    spn2.innerText="Password is required!"
+                    spn2.style.color = "red";
+                    isValid=false;
+                }
+                if(isValid===false){
+                    hex.preventDefault();
+                }
+            });
+        </script>
+</body>
+</html>
