@@ -41,7 +41,7 @@ btnAdd.addEventListener("click", () => {
 	let x = txtFirst.value;
 	let y = txtSec.value;
 	let result = validate(x, y);
-    if(result === true){
+    if(result){
     let z =  Number(x) + Number(y) ;
     txtThird.value = z ;
     }

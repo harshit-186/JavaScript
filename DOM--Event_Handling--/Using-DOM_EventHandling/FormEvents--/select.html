@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frm">
+        Select your language : 
+        <select name="slt" id="st">
+            <option >C</option>
+            <option>C++</option>
+            <option>JAVA</option>
+            <option>PYTHON</option>
+            <option>SPRING</option>
+            <option>JAVASCRIPT</option>
+        </select>
+        <br>
+    </form>
+    <script>
+        const myForm = document.frm ;
+        const slt = myForm.slt ;
+        slt.addEventListener("click" , (hex)=>{
+            alert("You Select : "+ hex.target.value);
+        } );
+    </script>
+</body>
+</html>
