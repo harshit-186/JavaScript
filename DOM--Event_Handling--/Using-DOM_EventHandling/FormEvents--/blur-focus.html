@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="frm">
+      <h2>Contact Form</h2>
+      <br />
+      Your email Plz : <input type="text" name="txt" /><span id="spn"></span>
+    </form>
+    <script>
+      let myForm = document.frm;
+      let inp = myForm.txt;
+      let spn = document.querySelector("#spn");
+      inp.addEventListener("blur", () => {
+        // blur or focusout -> an element loses focus
+        if (!inp.value.includes("@")) {
+          spn.innerText = "Plz input a valid email!";
+          spn.style.color = "red";
+        }
+      });
+      inp.addEventListener("focus", () => {
+        spn.innerText = "";
+        inp.value = "";
+      });
+    </script>
+  </body>
+</html>
