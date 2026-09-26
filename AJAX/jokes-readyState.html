@@ -105,12 +105,14 @@
         let btn = document.querySelector("#btn");
         let p1 = document.querySelector("#p1");
         let p2 = document.querySelector("#p2");
+
         btn.addEventListener("click", () => {
-            xhr.readystatechange = prcRespns;
-            xhr.open("GET" , "https://official-joke-api.appspot.com/jokes/programming/random" , true);
+            xhr.onreadystatechange = prcRespns; // Handler Setup
+            xhr.open("GET" , "https://official-joke-api.appspot.com/jokes/programming/random" , true); // request generate
             xhr.send(null);
         });
-        let prcRespns = () => {
+
+        let prcRespns = () => { // Handler 
           if (xhr.readyState === 4 && xhr.status === 200) {
             let jokeArr = JSON.parse(xhr.responseText);
             let jokeObj = jokeArr[0];
