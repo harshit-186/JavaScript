@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+      body{
+        background-color: skyblue;
+      }
+      div {
+        color: darkblue;
+        text-align: center;
+        height: 100%;
+      }
+      span#result {
+        color: darkred;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Click the button to receive the result of Promise</h2>
+      <input type="button" value="Show Result" onclick="doTask()"/><br />
+      <br /><br />
+      <span id="result"></span>
+      <span id="icn"></span>
+      <span id="hex"></span>
+    </div>
+    <script>
+        let spn1 = document.querySelector("#result");
+        let spn2 = document.querySelector("#icn");
+
+        function makeProject(num){
+            // promise ek function leta h jisme to callback hote h (Executor)
+            let pr = new Promise(function(resolve,reject)// Executor leta h ( Executor callback hota h )  
+            { // Promise Produce
+                    setInterval(()=>// Long task code 
+                    {
+                        if(num%2===0){
+                            resolve("Hurray! Project Completed!");
+
+                        }else{
+                            reject("Sorry! Project not Completed!");
+                        }
+                    },3000);
+            });
+            return pr;
+        }
+
+        function doTask(){
+            let today = new Date();
+            let crntSec = today.getSeconds();
+            console.log("Current Second : "+crntSec);
+            console.log("MakeProject() called !");
+            let pr = makeProject(crntSec);
+
+            pr.then((success)=>{  // Promise Consume
+                spn1.innerText = success;
+                spn2.innerText = "😁😁";
+            })
+            .catch((error)=>{
+                spn1.innerText = error;
+                spn2.innerText = "😞😞";
+            }).finally(()=>{
+                spn1.innerHTML += "<br> All the best for next time!"
+            });
+            console.log("Bye!");
+        }
+    </script>
+  </body>
+</html>
