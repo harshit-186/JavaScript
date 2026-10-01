@@ -19,10 +19,11 @@
         async function getEmoji(){ // jo promise ka code hota h uske liye async lgate h 
             return 10; // returns Promise until we consume it 
         }
-        function doTask(){
-            let res = getEmoji();
-            spn.innerText = res ; // object Promise
-            console.log("Done!");
+         async function doTask(){
+            // await gives the resolve output but await wants its function async also
+            let res = await getEmoji();// Promise resolve consume 
+            spn.innerText = res ; // 10
+            console.log("Done!"); // ye asynchronous code to synchronous bna deta h (done! await k chlne k baad chlega)
         }
     </script>
 </body>
