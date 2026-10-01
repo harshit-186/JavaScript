@@ -21,7 +21,7 @@
         }
          async function doTask(){
             // await gives the resolve output but await wants its function async also
-            let res = await getEmoji();// Promise resolve consume 
+            let res = await getEmoji();// only Promise resolve consume (if reject then await gives Exception)
             spn.innerText = res ; // 10
             console.log("Done!"); // ye asynchronous code to synchronous bna deta h (done! await k chlne k baad chlega)
         }

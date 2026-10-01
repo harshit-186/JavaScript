@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+      body {
+        background-color: skyblue;
+      }
+      div {
+        color: darkblue;
+        text-align: center;
+        height: 100%;
+      }
+      span#result {
+        color: darkred;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Click the button to receive the result of Promise</h2>
+      <input type="button" value="Show Result" onclick="doTask()" /><br />
+      <br /><br />
+      <span id="result"></span>
+      <span id="icn"></span>
+    </div>
+    <script>
+      let spn1 = document.querySelector("#result");
+      let spn2 = document.querySelector("#icn");
+
+      async function getEmoji(){
+        let pr = new Promise(function(resolve,reject){
+                  setInterval(()=>// Long task code
+                  {
+                       let num = Math.round(Math.random());
+
+                      if(num === 1){
+                          resolve("Resolevd 😁");
+
+                      }else{
+                          reject("Rejected 😞");
+                      }
+                  },3000);
+      });
+      return pr ; 
+    }
+
+      async function doTask(){ // makes function as synchronous
+          let pr = await getEmoji(); // if reject it gives Exception 
+          spn2.innerText = pr ;
+          console.log("Bye!");// Bye! execute after await compeletion
+      }
+    </script>
+  </body>
+</html>
