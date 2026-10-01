@@ -41,7 +41,7 @@
                        let num = Math.round(Math.random());
 
                       if(num === 1){
-                          resolve("Resolevd 😁");
+                          resolve("Resolved 😁");
 
                       }else{
                           reject("Rejected 😞");
@@ -51,8 +51,16 @@
       return pr ; 
     }
       async function doTask(){ // makes function as synchronous
+        try{
           let pr = await getEmoji(); // if reject it gives Exception 
-          spn2.innerText = pr ;
+          spn1.innerText = pr ;
+        }
+        catch(error){
+            spn1.innerText = error ;
+        }
+        finally{
+            spn2.innerHTML += "<br> Have a Good Day!"
+        }
           console.log("Bye!");// Bye! execute after await compeletion
       }
     </script>
